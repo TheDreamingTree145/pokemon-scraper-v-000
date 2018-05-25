@@ -22,10 +22,7 @@ class Pokemon
 
   def self.find(poke_id, db)
      info = db.execute(("SELECT * FROM pokemon WHERE id = ?"), id).flatten
-  # self.save(@pokemon[0][2], @pokemon[0][3], db)
-  # binding.pry
-
-    self.save(info[1], info[2], db)
+    binding.pry
   end
 
   def alter_hp(damaged_hp, db)
